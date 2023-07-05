@@ -51,3 +51,17 @@ add_image加图像
 打开log ：terminal输入`tensorboard --logdir=logs`,指定端口`tensorboard --logdir=logs --port=6007`
 
 ![image-20230705202353966](C:/Users/FENG/AppData/Roaming/Typora/typora-user-images/image-20230705202353966.png)
+
+# Transforms
+
+torchvision之中的Transform的结构和用法, transform.py工具箱
+
+其中有很多类totensor（转化为tensor）数据类型
+
+resize，compose等等......每个工具类我们都需要实例对象+调用对象方法
+
+## 常见的Transforms
+
+- 输入，输出，作用
+- PIL，tensor，narrays
+- Image.open(), ToTensor(), cv.imread()
