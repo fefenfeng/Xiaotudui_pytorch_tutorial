@@ -26,4 +26,11 @@ Jupyter以任意行为块运行，利于代码阅读及修改，缺点环境需�
 
 # PyTorch加载数据
 
-主要两类：Dataset和Dataloader
+- Dataset: 提供一种方式去获取数据及其label
+
+  **如何获取每一个数据及其label**
+
+  **告诉我们总共有多少的数据**
+
+- Dataloader: 为网络提供不同的数据形式
+
