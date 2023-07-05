@@ -32,5 +32,22 @@ Jupyter以任意行为块运行，利于代码阅读及修改，缺点环境需�
 
   **告诉我们总共有多少的数据**
 
+  继承重写子类，重写`__getitem__`和`len`
+
 - Dataloader: 为网络提供不同的数据形式
 
+数据集label形式：文件夹为label，OCR数据集，label在图片名称上面
+
+# TensorBoard
+
+pytorch1.1之后从tensorflow移植过来
+
+add_scalar 一般用于训练过程中显示train-loss
+
+add_image加图像
+
+![image-20230705204814917](C:/Users/FENG/AppData/Roaming/Typora/typora-user-images/image-20230705204814917.png)
+
+打开log ：terminal输入`tensorboard --logdir=logs`,指定端口`tensorboard --logdir=logs --port=6007`
+
+![image-20230705202353966](C:/Users/FENG/AppData/Roaming/Typora/typora-user-images/image-20230705202353966.png)
