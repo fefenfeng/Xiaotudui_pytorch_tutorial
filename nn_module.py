@@ -1,20 +1,19 @@
-# -*- coding: utf-8 -*-
-# 作者：小土堆
-# 公众号：土堆碎念
 import torch
 from torch import nn
 
 
-class Tudui(nn.Module):
-    def __init__(self):
+class Fengmodule(nn.Module):
+    def __init__(self) -> None:
         super().__init__()
+    # def __init__(self):
+    #     super().__init__()
 
     def forward(self, input):
         output = input + 1
         return output
 
 
-tudui = Tudui()
+fengmodule = Fengmodule()
 x = torch.tensor(1.0)
-output = tudui(x)
+output = fengmodule(x)
 print(output)
