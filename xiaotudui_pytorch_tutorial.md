@@ -65,3 +65,29 @@ resize，compose等等......每个工具类我们都需要实例对象+调用对
 - 输入，输出，作用
 - PIL，tensor，narrays
 - Image.open(), ToTensor(), cv.imread()
+
+# pytorch.torchvision中的数据集使用
+
+torchvision.datasets以及和transforms一起的使用
+
+![image-20230706195239011](C:/Users/FENG/AppData/Roaming/Typora/typora-user-images/image-20230706195239011.png)
+
+# Dataloader
+
+dataset, batch_size, shuffle, num_workers（几个进程加载数据，0就是仅有一个主进程）,drop last(batch_size除尽余下的舍不舍去)
+
+# 神经网络的基本骨架 -nn.Module的使用
+
+containers容器，Module所有神经网络的一个基本骨架，神经网络需要继承Module
+
+主要写两个函数，一个init初始化继承父类super，一个forward前向传播
+
+# Convolution layers
+
+CONV1D, CONV2D, torch.nn.functional是nn的更细致功能和设置
+
+dialation空洞卷积不经常用
+
+# Pooling Layers
+
+cell_mode floor向下取整 ceil向上取整
