@@ -91,3 +91,7 @@ dialation空洞卷积不经常用
 # Pooling Layers
 
 cell_mode floor向下取整 ceil向上取整
+
+# 非线性激活
+
+ReLU，Sigmoid

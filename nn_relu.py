@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-# 作者：小土堆
-# 公众号：土堆碎念
 import torch
 import torchvision
 from torch import nn
@@ -14,29 +11,30 @@ input = torch.tensor([[1, -0.5],
 input = torch.reshape(input, (-1, 1, 2, 2))
 print(input.shape)
 
-dataset = torchvision.datasets.CIFAR10("../data", train=False, download=True,
+dataset = torchvision.datasets.CIFAR10("./dataset", train=False, download=True,
                                        transform=torchvision.transforms.ToTensor())
 
 dataloader = DataLoader(dataset, batch_size=64)
 
-class Tudui(nn.Module):
+class Feng(nn.Module):
     def __init__(self):
-        super(Tudui, self).__init__()
+        super(Feng, self).__init__()
         self.relu1 = ReLU()
         self.sigmoid1 = Sigmoid()
 
     def forward(self, input):
         output = self.sigmoid1(input)
+        # output = self.relu1(input)
         return output
 
-tudui = Tudui()
+feng = Feng()
 
-writer = SummaryWriter("../logs_relu")
+writer = SummaryWriter("./logs")
 step = 0
 for data in dataloader:
     imgs, targets = data
     writer.add_images("input", imgs, global_step=step)
-    output = tudui(imgs)
+    output = feng(imgs)
     writer.add_images("output", output, step)
     step += 1
 
