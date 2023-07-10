@@ -6,7 +6,7 @@ from torch import nn
 image_path = "./imgs/airplane.png"
 image = Image.open(image_path)
 print(image)
-image = image.convert('RGB')
+image = image.convert('RGB')   # png格式为4通道，除RGB三通道还有一个透明通道
 transform = torchvision.transforms.Compose([torchvision.transforms.Resize((32, 32)),
                                             torchvision.transforms.ToTensor()])
 
@@ -31,8 +31,8 @@ class Feng(nn.Module):
     def forward(self, x):
         x = self.model(x)
         return x
-
-model = torch.load("tudui_29_gpu.pth", map_location=torch.device('cpu'))
+model = torch.load("tudui_29_gpu.pth")
+model = torch.load("tudui_29_gpu.pth", map_location=torch.device('cpu'))  # gpu上训练的模型，如果转移到cpu就搞一下
 print(model)
 image = torch.reshape(image, (1, 3, 32, 32))
 model.eval()
