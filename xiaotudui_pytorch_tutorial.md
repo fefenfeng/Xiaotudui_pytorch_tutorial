@@ -95,3 +95,7 @@ cell_mode floor向下取整 ceil向上取整
 # 非线性激活
 
 ReLU，Sigmoid
+
+# 其余层
+
+批量归一化，Recurrent layers, drop out, linear其实就是全连接层, embedding, distance functions, loss functions,shuffle, transformer
