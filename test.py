@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
-# 作者：小土堆
-# 公众号：土堆碎念
 import torch
 import torchvision
 from PIL import Image
 from torch import nn
 
-image_path = "../imgs/airplane.png"
+image_path = "./imgs/airplane.png"
 image = Image.open(image_path)
 print(image)
 image = image.convert('RGB')
@@ -16,9 +13,9 @@ transform = torchvision.transforms.Compose([torchvision.transforms.Resize((32, 3
 image = transform(image)
 print(image.shape)
 
-class Tudui(nn.Module):
+class Feng(nn.Module):
     def __init__(self):
-        super(Tudui, self).__init__()
+        super(Feng, self).__init__()
         self.model = nn.Sequential(
             nn.Conv2d(3, 32, 5, 1, 2),
             nn.MaxPool2d(2),
