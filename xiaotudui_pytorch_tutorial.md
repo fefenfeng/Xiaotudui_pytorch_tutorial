@@ -99,3 +99,5 @@ ReLU，Sigmoid
 # 其余层
 
 批量归一化，Recurrent layers, drop out, linear其实就是全连接层, embedding, distance functions, loss functions,shuffle, transformer
+
+![image-20230710142214413](C:/Users/FENG/AppData/Roaming/Typora/typora-user-images/image-20230710142214413.png)
