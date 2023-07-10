@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-# 作者：小土堆
-# 公众号：土堆碎念
 import torch
 from torch.nn import L1Loss
 from torch import nn
@@ -11,9 +8,10 @@ targets = torch.tensor([1, 2, 5], dtype=torch.float32)
 inputs = torch.reshape(inputs, (1, 1, 1, 3))
 targets = torch.reshape(targets, (1, 1, 1, 3))
 
-loss = L1Loss(reduction='sum')
+loss = L1Loss()
+# loss = L1Loss(reduction='sum')
 result = loss(inputs, targets)
-
+# MSE
 loss_mse = nn.MSELoss()
 result_mse = loss_mse(inputs, targets)
 

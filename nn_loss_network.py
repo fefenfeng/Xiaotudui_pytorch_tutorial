@@ -1,19 +1,16 @@
-# -*- coding: utf-8 -*-
-# 作者：小土堆
-# 公众号：土堆碎念
 import torchvision
 from torch import nn
 from torch.nn import Sequential, Conv2d, MaxPool2d, Flatten, Linear
 from torch.utils.data import DataLoader
 
-dataset = torchvision.datasets.CIFAR10("../data", train=False, transform=torchvision.transforms.ToTensor(),
+dataset = torchvision.datasets.CIFAR10("./dataset", train=False, transform=torchvision.transforms.ToTensor(),
                                        download=True)
 
 dataloader = DataLoader(dataset, batch_size=1)
 
-class Tudui(nn.Module):
+class Feng(nn.Module):
     def __init__(self):
-        super(Tudui, self).__init__()
+        super(Feng, self).__init__()
         self.model1 = Sequential(
             Conv2d(3, 32, 5, padding=2),
             MaxPool2d(2),
@@ -32,9 +29,11 @@ class Tudui(nn.Module):
 
 
 loss = nn.CrossEntropyLoss()
-tudui = Tudui()
+feng = Feng()
 for data in dataloader:
     imgs, targets = data
-    outputs = tudui(imgs)
+    outputs = feng(imgs)
+    # print(outputs)
+    # print(targets)
     result_loss = loss(outputs, targets)
-    print("ok")
+    result_loss.backward()
