@@ -46,11 +46,11 @@ add_scalar 一般用于训练过程中显示train-loss
 
 add_image加图像
 
-![image-20230705204814917](C:/Users/FENG/AppData/Roaming/Typora/typora-user-images/image-20230705204814917.png)
+![image-20230705204814917](xiaotudui_pytorch_tutorial.assets/image-20230705204814917.png)
 
 打开log ：terminal输入`tensorboard --logdir=logs`,指定端口`tensorboard --logdir=logs --port=6007`
 
-![image-20230705202353966](C:/Users/FENG/AppData/Roaming/Typora/typora-user-images/image-20230705202353966.png)
+![image-20230705202353966](xiaotudui_pytorch_tutorial.assets/image-20230705202353966.png)
 
 # Transforms
 
@@ -70,7 +70,7 @@ resize，compose等等......每个工具类我们都需要实例对象+调用对
 
 torchvision.datasets以及和transforms一起的使用
 
-![image-20230706195239011](C:/Users/FENG/AppData/Roaming/Typora/typora-user-images/image-20230706195239011.png)
+![image-20230706195239011](xiaotudui_pytorch_tutorial.assets/image-20230706195239011.png)
 
 # Dataloader
 
@@ -100,7 +100,7 @@ ReLU，Sigmoid
 
 批量归一化，Recurrent layers, drop out, linear其实就是全连接层, embedding, distance functions, loss functions,shuffle, transformer
 
-![image-20230710142214413](C:/Users/FENG/AppData/Roaming/Typora/typora-user-images/image-20230710142214413.png)
+![image-20230710142214413](xiaotudui_pytorch_tutorial.assets/image-20230710142214413.png)
 
 # 模型的保存和加载
 

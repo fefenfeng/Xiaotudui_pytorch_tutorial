@@ -3,3 +3,6 @@
 /data
 /logs_*
 /dataset
+#/xiaotudui_pytorch_tutorial.assets
+/imgs
+/_pycache_
